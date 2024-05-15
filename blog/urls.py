@@ -20,5 +20,9 @@ import blog_app.views as views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name="index")
+    path('', views.index, name="index"),
+    path('articles/<int:id>', views.show, name="show"),
+    path('create', views.create, name="create"),
+    path('delete/<int:id>', views.delete, name="delete"),
+    path('update/<int:id>', views.update, name="update"),
 ]
